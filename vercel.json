@@ -1,0 +1,14 @@
+{
+    "name": "eduinsight-ai-react",
+    "framework": "vite",
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "/api/index.py"
+        },
+        {
+            "source": "/((?!api/|.*\\..*).*)",
+            "destination": "/index.html"
+        }
+    ]
+}
