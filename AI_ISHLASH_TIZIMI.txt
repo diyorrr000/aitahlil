@@ -1,0 +1,48 @@
+Ta'limNigoh AI - Sun'iy Intellekt Integratsiyasi va Ishlash Tizimi (Texnik Tavsif)
+
+Ushbu loyihada foydalanilgan Sun'iy Intellekt (AI) tizimi zamonaviy "GPT-5 NANO" arxitekturasiga asoslangan bo'lib, talabalar faolligini tahlil qilish uchun maxsus optimallashtirilgan. Quyida tizimning ishlash texnologiyasi batafsil yoritilgan:
+
+1. TEXNOLOGIK STACK:
+   - Frontend: React.js (Data Management)
+   - Backend: Python (FastAPI/Flask arxitekturasi yordamida Vercel Functions platformasida)
+   - AI Model: GPT-5 NANO (Advanced Large Language Model)
+   - Protokol: REST API (JSON formatida ma'lumot almashinuvi)
+
+2. DATA PROCESSING (Ma'lumotlarni qayta ishlash):
+   Talabalar ma'lumotlari (davomat, test natijalari, topshiriqlar, guruh faolligi) frontend tomonidan yig'iladi va JSON formatiga keltiriladi.
+   Namuna:
+   {
+     "name": "Ali Valiyev",
+     "attendance": 85,
+     "test_score": 92,
+     "assignment": 78,
+     "risk_level": "yaxshi"
+   }
+
+3. BACKEND INTEGRATSIYASI (api/index.py):
+   React ilovasi to'g'ridan-to'g'ri AI stoliga so'rov yubormaydi. Xavfsizlik va ma'lumotlarni to'g'ri filtrlash uchun "Proxy-Server" (Python backend) ishlatiladi. Backend quyidagi ishlarni bajaradi:
+   - Client dan JSON ma'lumotlarni qabul qiladi.
+   - Foydalanuvchi tanlagan tilni (UZ/RU/EN) aniqlaydi.
+   - AI uchun maxsus "Prompt" (buyruq) shakllantiradi.
+
+4. SYSTEM PROMPTING (AI ga beriladigan instruktsiyalar):
+   AI ga quyidagi tizimli buyruqlar berilgan:
+   - "Siz professional pedagog-analitiksiz."
+   - "Talaba ko'rsatkichlarini tahlil qilib, uning kuchli va kuchsiz tomonlarini ayting."
+   - "Kelajakda uning natijalarini yaxshilash uchun 3 ta aniq tavsiya bering."
+   - "Javobni foydalanuvchi so'ragan tilda (O'zbek, Rus yoki Ingliz) taqdim eting."
+
+5. MULTI-LANGUAGE (Ko'p tillilik) MEXANIZMI:
+   Platforma tanlangan tilni tahlil so'rovi bilan birga yuboradi. AI modelining o'zi tabiiy tillarni qayta ishlash (NLP) orqali matnlarni tarjima qilmasdan, o'sha tilda original tahlil yaratadi. Bu esa pedagogik atamalarning to'g'ri ishlatilishini ta'minlaydi.
+
+6. NATIJALARNI QAYTA ISHLASH:
+   - AI dan kelgan javob "Markdown" formatida qabul qilinadi.
+   - React UI dagi "Framer Motion" animatsiyalari orqali tahlil natijalari "yozilayotgan" (typing effect) holatida ekranga chiqariladi.
+   - Foydalanuvchi ushbu tahlilni darhol .txt fayl sifatida yuklab olishi mumkin.
+
+7. XAVFSIZLIK VA OPTIMALLASHTIRISH:
+   - CORS sozlamalari orqali faqat ruxsat berilgan domenlardan so'rov yuborish imkoniyati bor.
+   - API Key'lar "Environment Variables" (Vercel) ichida yashirilgan, bu esa xavfsizlikni 100% ta'minlaydi.
+
+Loyiha Muallifi: Diyorbek (Ta'limNigoh AI Team)
+Sana: 2026
